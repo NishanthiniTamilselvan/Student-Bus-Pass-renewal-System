@@ -1,0 +1,746 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!--
+   passregistration.html
+   
+   Copyright 2017 hasee <hasee@HASEE-PC>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Basic Form</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+	background-color: #4fa2c4;
+}
+
+body{
+	font:14px/1.5 Arial, Helvetica, sans-serif;
+	margin:0;
+}
+
+
+header{
+    box-sizing: border-box;
+	text-align: center;
+    width: 100%;
+    padding: 25px 40px;
+    background-color:#4fa2c4;
+    overflow: hidden;
+}
+
+
+header h1{
+    float: left;
+	font: normal 24px/1.5 'Open Sans', sans-serif;
+	color: #4fa2c4;
+}
+
+header a{
+    color:#4fa2c4;
+    float: right;
+    text-decoration: none;
+    display: inline-block;
+    padding: 13px 50px;
+    border-radius: 3px;
+    font: bold 14px/1 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    background-color:#4fa2c4;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#4fa2c4;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+     color: white;
+    text-align: center;
+    font-family:times new Roman;
+    padding:20px 18px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color:#4fa2c4;
+}
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color:#4fa2c4;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:lightblue;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 1000px) {
+
+
+    header h1{
+        float: none;
+    }
+
+    header a{
+        margin-top: 25px;
+        float: none;
+    }
+
+}
+
+.main-content{
+    margin-bottom: 75px;
+}
+
+/* -- Demo ads -- */
+
+@media (max-width: 1200px) {
+	#bsaHolder{ display:none;}
+}
+
+/* -- Link to Tutorialzine -- */
+
+.tz-link{
+	text-decoration: none;
+	color: #fff !important;
+	font: bold 36px Arial,Helvetica,sans-serif !important;
+}
+
+.tz-link span{
+	color: #da431c;
+}
+html{
+    background-color: #f3f3f3;
+}
+
+.form-basic{
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 55px;
+    box-sizing: border-box;
+
+    background-color:  #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+
+    font: bold 14px sans-serif;
+    text-align: center;
+}
+
+.form-basic .form-row{
+    text-align: left;
+    margin-bottom: 22px;
+}
+
+.form-basic .form-title-row{
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+/* The form title */
+
+.form-basic h1{
+    display: inline-block;
+    box-sizing: border-box;
+    color:  #4c565e;
+    font-size: 24px;
+    padding: 0 10px 15px;
+    border-bottom: 2px solid #6caee0;
+    margin: 0;
+}
+
+.form-basic .form-row > label span{
+    display: inline-block;
+    box-sizing: border-box;
+    color: #5F5F5F;
+    width: 180px;
+    text-align: right;
+    vertical-align: top;
+    padding: 12px 25px;
+}
+
+.form-basic input{
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    width: 240px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+}
+
+.form-basic input[type=radio],
+.form-basic input[type=checkbox]{
+    box-shadow: none;
+    width: auto;
+}
+
+.form-basic input[type=checkbox]{
+    margin-top: 13px;
+}
+
+.form-basic select{
+    background-color: #ffffff;
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    max-width: 240px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 12px 8px;
+    border: 1px solid #dbdbdb;
+}
+
+.form-basic textarea{
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    width: 240px;
+    height: 80px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    font: normal 13px sans-serif;
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    resize: vertical;
+}
+
+.form-basic .form-radio-buttons{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.form-basic .form-radio-buttons > div{
+    margin-top: 10px;
+}
+
+.form-basic .form-radio-buttons label span{
+    margin-left: 8px;
+    color: #5f5f5f;
+    font-weight: normal;
+}
+
+.form-basic .form-radio-buttons input{
+    width: auto;
+}
+
+.form-basic button{
+    display: block;
+    border-radius: 2px;
+    background-color:#4fa2c4;
+    color: #ffff;
+    font-weight: bold;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 14px 22px;
+    border: 0;
+    margin: 40px 183px 0;
+}
+
+/*	Making the form responsive. Remove this media query
+    if you don't need the form to work on mobile devices. */
+
+@media (max-width: 600px) {
+
+    .form-basic{
+        padding: 30px;
+        max-width: 480px;
+    }
+
+    .form-basic .form-row{
+        max-width: 300px;
+        margin: 25px auto;
+        text-align: left;
+    }
+
+    .form-basic .form-title-row{
+        margin-bottom: 50px;
+    }
+
+    .form-basic .form-row > label span{
+        display: block;
+        text-align: left;
+        padding: 0 0 15px;
+    }
+
+    .form-basic select{
+        width: 240px;
+    }
+
+    .form-basic input[type=checkbox]{
+        margin-top:0;
+    }
+
+    .form-basic .form-radio-buttons > div{
+        margin: 0 0 10px;
+    }
+
+    .form-basic button{
+        margin: 0;
+    }
+
+}
+
+</style>
+</head>
+
+<link href="registerstyle.css" type="text/css" rel="stylesheet">
+<script>
+function formValidation()
+{  
+var name = document.getElementById("user");
+var male = document.getElementById("male");
+var female = document.getElementById("female");
+var mob = document.getElementById("mob");
+var age = document.getElementById("age");
+ var natio = document.getElementById("country");
+ var add1 = document.getElementById("address1");
+ var add2 = document.getElementById("address2");
+ var mail = document.getElementById("mail");
+ var course = document.getElementById("cour");
+ var dept = document.getElementById("dept");
+ var uname= document.getElementById("uname");
+ var passid = document.getElementById("pass");
+  if(name_validation(name))  
+    {  
+	 if(allnumeric(mob))  
+    {  
+	 if(allnumeric(age))  
+    {   
+    if(countryselect(natio))  
+    { 	 
+    if(alphanumeric(add1))  
+    {  
+    if(alphanumeric(add2))  
+    {   /*
+	 if(allnumeric(uzip))  
+    {  */
+    if(ValidateEmail(mail))  
+    { 
+    if(selectcourse(course))  
+    { 
+    if(selectdept(dept))  
+    {   	
+	if(allLetter(uname))  
+    { 
+    if(passid_validation(pass,8,10))  
+    {  	   
+if(validsex(male,female))  
+{
+return true;  
+}  
+
+
+}	}	}	}    }       }       }      }       }     }     } 	
+    return false;  
+      
+    } 
+
+function name_validation(name)  
+  {   
+    var letters = /^[A-Za-z]+$/;  
+    if(name.value.match(letters))  
+    {  
+    return true;  
+    }  
+    else  
+    {  
+    alert('Name must have alphabet characters only');  
+    name.focus();  
+    return false;  
+    }  
+    
+ }  
+ 
+    function allnumeric(mob)  
+    {   
+    var numbers = /^[0-9]+$/;  
+    if(mob.value.match(numbers))  
+    {  
+    return true;  
+    }  
+    else  
+    {  
+    alert('mobile numbers must have numeric characters only');  
+    mob.focus();  
+    return false;  
+    }  
+    }
+    
+function validsex(male,female)  
+    {  
+    x=0;    
+    if(male.checked)   
+    {  
+    x++;  
+    } if(female.checked)  
+    {  
+    x++;   
+    }  
+    if(x==0)  
+    {  
+    alert('Select Male/Female');  
+    male.focus();  
+    return false;  
+    }  
+   else  
+    {  
+    
+    return true;  
+    }  
+    }
+
+
+    function allnumeric(age)  
+    {   
+    var numbers = /^[0-9]+$/;  
+    if(age.value.match(numbers))  
+    {  
+    return true;  
+    }  
+    else  
+    {  
+    alert('Age must have numeric characters only');  
+    age.focus();  
+    return false;  
+    }  
+    }   
+	
+function countryselect(natio)  
+    {  
+    if(natio.value == "Default")  
+    {  
+    alert('Select your country from the list');  
+    natio.focus();  
+    return false;  
+    }  
+    else  
+    {  
+    return true;  
+    }  
+    }
+	
+function alphanumeric(add1)  
+    {   
+    var letters = /^[0-9a-zA-Z]+$/;  
+    if(add1.value.match(letters))  
+    {  
+    return true;  
+    }  
+    else  
+    {  
+    alert('User address must have alphanumeric characters only');  
+    add1.focus();  
+    return false;  
+    }  
+    }
+	
+function alphanumeric(add2)  
+    {   
+    var letters = /^[0-9a-zA-Z]+$/;  
+    if(add2.value.match(letters))  
+    {  
+    return true;  
+    }  
+    else  
+    {  
+    alert('User address must have alphanumeric characters only');  
+    add2.focus();  
+    return false;  
+    }  
+    }  
+
+function ValidateEmail(mail)  
+    {  
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+    if(mail.value.match(mailformat))  
+    {  
+    return true;  
+    }  
+    else  
+    {  
+    alert("You have entered an invalid email address!");  
+    mail.focus();  
+    return false;  
+    }  
+    }
+
+function selectcourse(cour)  
+    {  
+    if(cour.value == "Default")  
+    {  
+    alert('Select your course from the list');  
+    cour.focus();  
+    return false;  
+    }  
+    else  
+    {  
+    return true;  
+    }  
+    }  
+
+function selectdept(dept)  
+    {  
+    if(dept.value == "Default")  
+    {  
+    alert('Select your department from the list');  
+    dept.focus();  
+    return false;  
+    }  
+    else  
+    {  
+    return true;  
+    }  
+    }  
+
+function allLetter(uname)  
+    {   
+    var letters = /^[A-Za-z]+$/;  
+    if(uname.value.match(letters))  
+    {  
+    return true;  
+    }  
+    else  
+    {  
+    alert('Username must have alphabet characters only');  
+    uname.focus();  
+    return false;  
+    }  
+    } 
+
+function passid_validation(passid,mx,my)  
+    {  
+    var passid_len = passid.value.length;  
+    if (passid_len == 0 ||passid_len >= my || passid_len < mx)  
+    {  
+    alert("Password should not be empty / length be between "+mx+" to "+my);  
+    passid.focus();  
+    return false;  
+    }  
+    return true;  
+    }  
+
+
+</script>  
+
+</head>
+<body>
+<div class="form-row">
+
+<ul>
+  <li><a class="active" href="/">HOME</a></li>
+  <li><a href="/news">NEWS</a></li>
+  <li><a href="/contact">CONTACT</a></li>
+  <li><a href="/about">ABOUT</a></li>
+  
+            
+  </li>
+</ul>
+
+</div>
+    <div class="main-content">
+
+        <!-- You only need this form and the form-basic.css -->
+
+        <form class="form-basic" method="post" onsubmit="return formValidation();" action="{{ url_for('register')}}" >
+
+
+            <div class="form-title-row">
+                <h1>Registration</h1>
+            </div>
+<div class="form-row">
+                <label>
+                    <span>USER NAME</span>
+           
+        <input type="text"  id="user"  name="username" required="required" size="30" >
+ </label>
+            </div>
+<div class="form-row">
+                <label>
+                    <span>PASSWORD</span>
+            
+ 
+<input type="password" id="pass" name="password" required="required" size="30">
+    
+</label>
+            </div>
+<div class="form-row">
+                <label>
+            
+
+          <span>
+            PHONE</span>
+          <input type="number" id="mob" name="phone" required="required" size="30" value="" > 
+        </label>
+            </div>
+
+<div class="form-row">
+                <label><span>GENDER</span></label>
+                <div class="form-radio-buttons">
+
+                    <div>
+                        <label>
+
+
+     
+<input type="radio" id="male" name="gender" required="required" value="male">
+<span>male</span>  <input type="radio" id="female" name="gender" required="required" value="female">
+<span>female</span>
+ 
+  </label>
+                    </div>
+
+</div>
+</div>
+
+<div class="form-row">
+                <label>
+                    <span>AGE</span>
+  
+          <input type="text" id="age" name="age" required="required" size="5" value="" >
+          
+        
+ </label>
+            </div>
+
+
+<div class="form-row">
+                <label>
+                    <span>
+
+     ADDRESS</span>
+          <textarea rows=4 cols=22 id="add1" name="address" required="required" value=""></textarea>
+              
+ </label>
+            </div>
+
+
+        
+     
+<div class="form-row">
+                <label>
+                    <span>
+
+     EMAIL ID</span>
+          <input type="email" name="email" required="required" id="mail" size="30" value="" >
+                     
+ </label>
+            </div>
+  
+        
+<div class="form-row">
+                <label>
+                    <span>
+
+     
+COLLEGE NAME</span>
+    <select id="dept" name="college" required="required">  
+    <option selected="" value="Default">(Please select your college)</option>  
+    <option value="KGISL INSTITUTE OF TECHNOLOGY">KGISL INSTITUTE OF TECHNOLOGY</option>  
+    <option value="KUMARAGURU COLLEGE OF TECHNOLOGY">KUMARAGURU COLLEGE OF TECHNOLOGY</option>  
+    <option value="SANAKARA COLLEGE OF SCIENCE AND COMMERECE">SANKARA COLLEGE OF SCIENCE AND COMMERCE</option>  
+    <option value="SNS INSTITUTE OF TECHNOLOGY">SNS INSTITUTE OF TECHNOLOGY</option>  
+    <option value="KARPAGAM COLLEGE OF TECHNOLOGY">KARPAGAM COLLEGE OF TECHNOLOGY</option>  
+    </select>
+</label>
+            </div>
+
+<div class="form-row">
+                <label>
+                    <span>
+ 
+ COURSE</span> 
+    <select id="cour" name="course" required="required">  
+    <option selected="" value="Default">(Please select your course)</option>  
+    <option value="B.Tech">B.Tech</option>  
+    <option value="B.E">B.E</option>  
+    <option value="M.E">M.E</option>  
+    <option value="M.TECH">M.Tech</option>  
+    <option value="MBA">MBA</option>  
+    </select>
+</label>
+            </div>
+
+<div class="form-row">
+                <label>
+                    <span>
+
+ DEPARTMENT</span> 
+    <select id="dept" name="department" required="required">  
+    <option selected="" value="Default">(Please select your department)</option>  
+    <option value="IT">IT</option>  
+    <option value="CSE">CSE</option>  
+    <option value="EEE">EEE</option>  
+    <option value="MECH">MECH</option>  
+    <option value="EEE">EEE</option>  
+    </select>
+ 
+</label>
+            </div>
+      <div class="form-row">
+                <button type="submit">Submit Form</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+#HEADER
+{
+font-family: verdana, arial, sans-serif;
+background-color:WHITE;
+/*margin-left:12%;*/
+border-bottom: 10px solid ORANGE;
+/*padding-left:4em;
+word-spacing:11.33em;*/
+width:100%;
+HEIGHT:20%;
+top: 100px;
+BORDER:1PX  SOLID SILVER;
+}
+#TASKBAR
+{
+font-family: verdana, arial, sans-serif;
+background-color:#581510;
+/*margin-left:12%;
+border-bottom: 10px solid ORANGE;*/
+/*padding-left:4em;
+word-spacing:11.33em;*/
+width:100%;
+HEIGHT:20%;
+top: 100px;
+BORDER:1PX  SOLID SILVER;
+}
+#MENU
+{
+/*ALIGN:center;*/
+word-spacing:10%;
+/*height:50PX;
+width:100%;
+/*background-color:lightblue;
+BORDER:5PX silver;
+/*color: black;
+BORDER:1PX SOLID SILVER;*/
+}
+#center
+{
+/*ALIGN:center;*/
+word-spacing:10%;
+padding-top:5%;
+/*height:50PX;
+width:100%;
+background-color:#F2d7d2;*/
+/*BORDER:5PX silver;
+/*color: black;
+BORDER:1PX SOLID SILVER;*/
+}
+#SECOND
+{
+/*background-image: url(bus5.jpg);*/
+BACKGROUND-COLOR:#F2d7d2;
+margin-left:100%;
+height:250PX;
+width:50%;
+color: BLACK;
+BORDER:3PX SOLID RED;
+}
+#login
+{
+font-family: verdana, arial, sans-serif;
+background-color:white;
+border-bottom: 1px solid light;
+width:80%;
+HEIGHT:70%;
+top: 1px;
+BORDER:3PX SOLID white;
+BORDER:5PX SOLID red;
+}
+#Plogin
+{
+font-family: verdana, arial, sans-serif;
+/*background-color:silver;
+border-bottom: 1px solid light;*/
+width:28%;
+padding-top:2em;
+HEIGHT:250PX;
+margin-LEFT:5%;
+top: 1px;
+BORDER:5PX SOLID  BLACK;
+}
+
+#Slogin
+{
+font-family: verdana, arial, sans-serif;
+background-color:WHITE;
+width:100%;
+HEIGHT:250PX;
+margin-left:100%;
+top: 1px;
+BORDER:5PX SOLID red;
+}
+#DETAILS
+{
+font-family: verdana, arial, sans-serif;
+background-color:WHITE;
+border-bottom: 1px solid light;
+color:blue;
+margin-left:30%;
+width:30%;
+HEIGHT:150PX;
+top: 1px;
+BORDER:3PX SOLID white;
+}
+#footer {
+width:100%;
+HEIGHT:5%;
+color: WHITE;
+font-family:TIMES NEW ROMAN, verdana, arial, sans-serif;
+font-family:TIMES NEW ROMAN, verdana, arial, sans-serif;
+text-align: center;
+padding-top:1em;
+margin-Top:25%;
+/*word-spacing:12.33em;*/
+background-color:#581510;
+/*BORDER:5PX SOLID ORANGE;*/
+
+}

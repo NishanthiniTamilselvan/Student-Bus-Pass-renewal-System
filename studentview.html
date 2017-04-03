@@ -1,0 +1,128 @@
+<html>
+<head>
+	<title>studentview</title>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#4fa2c4;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+     color: white;
+    text-align: center;
+    font-family:times new Roman;
+    padding:20px 18px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color:SILVER;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+<link href="MYstyle.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="button.css" type="text/css">
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="/">HOME</a></li>
+  <li><a href="/applypass">PASS REGISTRATION</a></li>
+  <li><a href="/passrenewal">RENEWAL</a></li>
+  <li><a href="/mail">MESSAGE</a></li>
+  <li><a href="/busdetailss">BUS DETAILS</a></li>
+   <li><a href="/">LOGOUT</a></li>
+    
+</ul>
+<br><br>
+<h1 align="center">PROFILE</h1><br>
+	
+<table align="center">
+	{% for register in registration %}
+<tr>
+	<td><br>			
+USER NAME </td>
+        <td><br>: {{register.username}}</td>
+</tr>
+        <tr><td><br>	
+PHONE</td>
+        <td><br>: {{register.phone}}</td>
+        </tr>
+<tr><td><br>
+GENDER</td>
+<td><br>: {{register.gender}}</td></tr>
+<tr><td><br>
+ AGE</td>
+<td><br>: {{register.age}}</td> 
+  </tr>
+<tr><td><br>
+ADDRESS</td>
+<td><br>: {{register.address}}</td>  
+  </tr>
+  <tr><td><br>
+EMAIL ID</td>
+<td><br>: {{register.email}}</td>  
+  </tr>
+<tr><td><br>
+COLLEGE NAME</td>
+<td><br>: {{register.college}}</td>  
+  </tr>
+<tr><td><br>
+COURSE</td>
+<td><br>:{{register.course}}</td> </tr>
+<tr><td><br>
+DEPARTMENT</td>
+<td><br>: {{register.department}}</td></tr>          
+        
+      
+		 
+		  {% endfor %}
+      
+      </tr>
+</table>
+</body>
+</html>

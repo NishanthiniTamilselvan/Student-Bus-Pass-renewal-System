@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+   passregistration.html
+   
+   Copyright 2017 hasee <hasee@HASEE-PC>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+<head>
+<meta charset="utf-8" />
+<title>untitled</title>
+<meta name="generator" content="Geany 1.25" />
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#4fa2c4;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+     color: white;
+    text-align: center;
+    
+    padding:20px 18px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color:SILVER;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+</style>
+<link href="registerstyle.css" type="text/css" rel="stylesheet">
+
+<script>
+</script>  
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="/">HOME</a></li>
+  <li><a href="/addlocation">ADD LOCATION</a></li>
+  <li><a href="/USER_DETAILS"> USER DETAILS</a></li>
+  <li><a href="/MAIL">MAIL</a></li>
+   <li><a href="/login">LOGOUT</a></li>
+       
+ 
+</ul><br><br>
+<div align="center">
+<h1 align="center">ADD BUS DETAILS</h1>
+<TR>
+<TD>
+
+
+<form name="registration" onSubmit="return formValidation();" action="PASSSUCESS.HTML"  method="post" > 
+<table align="center" padding="10">
+        
+<tr>
+    <td><br>LOCATION</td> 
+    <td><BR><select id="locationstart" name="locationstart" required="required">  
+   
+    <option selected="" value="Default">(Please select a starting location)</option>  
+    <option value="Thudiyalur">Thudiyalur</option>  
+    <option value="Saravanampatti">Saravanampatti</option>  
+    <option value="Goundampalayam">Goundampalayam</option>  
+    <option value="Periyanayakanpalayam">periyanayakanpalayam</option>  
+    <option value="Gandhipuram">Gandhipuram</option>  
+    </select><BR>
+    To
+    <BR><select id="locationend" name="locationend" required="required">  
+    <option selected="" value="Default">(Please select a Ending location)</option>  
+    <option value="Ganapathi">Ganapathi</option>  
+    <option value="Saravanampatti">Saravanampatti</option> 
+    <option value="Lakshmi Mills">Lakshmi Mills</option>  
+    <option value="Ukkadam">Ukkadam</option>  
+    <option value="Town Halll">Town Hall</option>  
+    <option value="Goundampalayam">Goundampalayam</option>  
+    <option value="Periyanayakanpalayam">periyanayakanpalayam</option>  
+    <option value="Gandhipuram">Gandhipuram</option>  
+    </select></td></tr>  
+<tr>
+<td><br>AMOUNT</td>
+<td><br><input type="text" name="amount" size="30" value=""></td></tr>
+    <tr><td></td>
+<td><br><br><input type="SUBMIT" value="SUBMIT" class="mybutton" align="left"></td>
+</tr></TABLE>
+ 
+</div>
+
+
+</body>
+
+</html

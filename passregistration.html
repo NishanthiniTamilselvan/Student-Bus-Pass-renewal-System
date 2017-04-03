@@ -1,0 +1,451 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!--
+   passregistration.html
+   
+   Copyright 2017 hasee <hasee@HASEE-PC>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+<head>
+<meta charset="utf-8" />
+<title>untitled</title>
+<meta name="generator" content="Geany 1.25" />
+
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#4fa2c4;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+     color: white;
+    text-align: center;
+    font-family:times new Roman;
+    padding:20px 18px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color:SILVER;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+
+<script>
+function formValidation()
+{  
+var name = document.getElementById("user");
+var msex = document.getElementById("msex");
+var fsex = document.getElementById("fsex");
+var mob = document.getElementById("mob");
+var age = document.getElementById("age");
+ var natio = document.getElementById("country");
+ var add1 = document.getElementById("address1");
+ var add2 = document.getElementById("address2");
+ var mail = document.getElementById("mail");
+ var course = document.getElementById("cour");
+ var dept = document.getElementById("dept");
+ var uname= document.getElementById("uname");
+ var passid = document.getElementById("pass");
+  if(name_validation(name))  
+    {  
+	 if(allnumeric(mob))  
+    {  
+	 if(allnumeric(age))  
+    {   
+    if(countryselect(natio))  
+    { 	 
+    if(alphanumeric(add1))  
+    {  
+    if(alphanumeric(add2))  
+    {   /*
+	 if(allnumeric(uzip))  
+    {  */
+    if(ValidateEmail(mail))  
+    { 
+    if(selectcourse(course))  
+    { 
+    if(selectdept(dept))  
+    {   	
+	if(allLetter(uname))  
+    { 
+    if(passid_validation(pass,8,10))  
+    {  	   
+if(validsex(msex,fsex))  
+{
+return true;  
+}  
+
+
+}	}	}	}    }       }       }      }       }     }     } 	
+    return false;  
+      
+    } 
+
+function name_validation(name)  
+  {   
+    var letters = /^[A-Za-z]+$/;  
+    if(name.value.match(letters))  
+    {  
+    return true;  
+    }  
+    else  
+    {  
+    alert('Name must have alphabet characters only');  
+    name.focus();  
+    return false;  
+    }  
+    
+ }  
+ 
+    function allnumeric(mob)  
+    {   
+    var numbers = /^[0-9]+$/;  
+    if(mob.value.match(numbers))  
+    {  
+    return true;  
+    }  
+    else  
+    {  
+    alert('mobile numbers must have numeric characters only');  
+    mob.focus();  
+    return false;  
+    }  
+    }
+    
+function validsex(umsex,ufsex)  
+    {  
+    x=0;    
+    if(umsex.checked)   
+    {  
+    x++;  
+    } if(ufsex.checked)  
+    {  
+    x++;   
+    }  
+    if(x==0)  
+    {  
+    alert('Select Male/Female');  
+    umsex.focus();  
+    return false;  
+    }  
+   else  
+    {  
+    
+    return true;  
+    }  
+    }
+
+
+    function allnumeric(age)  
+    {   
+    var numbers = /^[0-9]+$/;  
+    if(age.value.match(numbers))  
+    {  
+    return true;  
+    }  
+    else  
+    {  
+    alert('Age must have numeric characters only');  
+    age.focus();  
+    return false;  
+    }  
+    }   
+	
+function countryselect(natio)  
+    {  
+    if(natio.value == "Default")  
+    {  
+    alert('Select your country from the list');  
+    natio.focus();  
+    return false;  
+    }  
+    else  
+    {  
+    return true;  
+    }  
+    }
+	
+function alphanumeric(add1)  
+    {   
+    var letters = /^[0-9a-zA-Z]+$/;  
+    if(add1.value.match(letters))  
+    {  
+    return true;  
+    }  
+    else  
+    {  
+    alert('User address must have alphanumeric characters only');  
+    add1.focus();  
+    return false;  
+    }  
+    }
+	
+function alphanumeric(add2)  
+    {   
+    var letters = /^[0-9a-zA-Z]+$/;  
+    if(add2.value.match(letters))  
+    {  
+    return true;  
+    }  
+    else  
+    {  
+    alert('User address must have alphanumeric characters only');  
+    add2.focus();  
+    return false;  
+    }  
+    }  
+
+function ValidateEmail(mail)  
+    {  
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+    if(mail.value.match(mailformat))  
+    {  
+    return true;  
+    }  
+    else  
+    {  
+    alert("You have entered an invalid email address!");  
+    mail.focus();  
+    return false;  
+    }  
+    }
+
+function selectcourse(cour)  
+    {  
+    if(cour.value == "Default")  
+    {  
+    alert('Select your course from the list');  
+    cour.focus();  
+    return false;  
+    }  
+    else  
+    {  
+    return true;  
+    }  
+    }  
+
+function selectdept(dept)  
+    {  
+    if(dept.value == "Default")  
+    {  
+    alert('Select your department from the list');  
+    dept.focus();  
+    return false;  
+    }  
+    else  
+    {  
+    return true;  
+    }  
+    }  
+
+function allLetter(uname)  
+    {   
+    var letters = /^[A-Za-z]+$/;  
+    if(uname.value.match(letters))  
+    {  
+    return true;  
+    }  
+    else  
+    {  
+    alert('Username must have alphabet characters only');  
+    uname.focus();  
+    return false;  
+    }  
+    } 
+
+function passid_validation(passid,mx,my)  
+    {  
+    var passid_len = passid.value.length;  
+    if (passid_len == 0 ||passid_len >= my || passid_len < mx)  
+    {  
+    alert("Password should not be empty / length be between "+mx+" to "+my);  
+    passid.focus();  
+    return false;  
+    }  
+    return true;  
+    }  
+
+
+</script>  
+
+</head>
+
+<body>
+
+<ul>
+   <li><a href="/applypass">PASS REGISTRATION</a></li>
+  <li><a href="/passrenewal">RENEWAL</a></li>
+  <li><a href="/editdetails"> EDIT DETAILS</a></li>
+  <li><a href="/changepassword">CHANGE PASSWORD</a></li>
+   <li><a href="/">LOGOUT</a></li>
+       
+  
+</ul>
+<br><br><br>
+<div align="center">
+<h1 align="center">REGISTERING BUS PASS</h1>
+<TR>
+<TD>
+<TABLE>
+
+<form name="registration" onSubmit="return formValidation();" action=""  method="post" > 
+      
+	
+        <tr>
+			
+<td>USER NAME*: </td>
+        <td>  <input type="text"  id="user"  name="username" required="required" size="30" >
+</td>
+      
+        </tr>
+<tr>
+			
+<td>REGISTRATION ID*: </td>
+        <td>  <input type="text"  id="user"  name="registration" required="required" size="30" >
+</td>
+      
+        </tr>
+      <tr>
+ 
+   <tr>
+    <td>LOCATION*:</td> 
+    <td><BR><select id="country" name="location" required="required">  
+   {% for register in addbus %}
+
+    <option selected="" value="Default">(Please select a starting location)</option>  
+    <option value="{{register.stopa}}">{{register.stopa}}</option>  
+    <option value="{{register.stopb}}">{{register.stopb}}</option>  
+    <option value="{{register.stopc}}">{{register.stopc}}</option>  
+    <option value="{{register.stopd}}">{{register.stopd}}</option>  
+    <option value="{{register.stope}}">{{register.stope}}</option>  
+    </select><BR>
+    To
+    <BR><select id="country" name="location" required="required">  
+	 <option value="{{register.stopa}}">{{register.stopa}}</option>  
+    <option value="{{register.stopb}}">{{register.stopb}}</option>  
+    <option value="{{register.stopc}}">{{register.stopc}}</option>  
+    <option value="{{register.stopd}}">{{register.stopd}}</option>  
+    <option value="{{register.stope}}">{{register.stope}}</option>  
+      </select></td></tr>  
+{% endfor %}
+    <tr>
+<td>DATE*:</TD><br>
+<TD><input type="date" id="date" size="30" value=""> <br>To<br>
+<INPUT type="date" id="date" size="30" value=""></td></tr>
+        
+        <tr>
+<td>ADDRESS*: </td>
+<td><textarea rows=4 cols=22 id="address1" value="" ></textarea></td
+  </tr>
+ 
+ <tr>
+          <td>EMAIL ID*: </td>
+          <td><input type="text" name="email" id="mail" size="30" value="" >
+          </td>
+        </tr>
+<tr>
+<td>COLLEGE:</td> 
+    <td><select id="cour" name="college">  
+    <option selected="" value="Default">(Please select your college)</option>  
+    <option value="kgisl">KGISL INSTITUTE OF TECHNOLOGY</option>  
+    <option value="kct">KUMARAGURU COLLEGE OF TECHNOLOGY</option>  
+    <option value="sns">SNS INSTITUTE OF TECHNOLOGY</option>  
+    <option value="karpagam">KARPAGAM COLLEGE OF TECHNOLOGY</option>  
+    <option value="eswar">SRI ESWAR COLLEGE OF ENGINEERING AND TECHNOLOGY</option>  
+    </select></td></tr>
+		<tr>
+  <tr>
+<td>COURSE:</td> 
+    <td><select id="cour">  
+    <option selected="" value="Default">(Please select your course)</option>  
+    <option value="it">B.Tech</option>  
+    <option value="cse">B.E</option>  
+    <option value="ece">M.E</option>  
+    <option value="mech">M.Tech</option>  
+    <option value="eee">MBA</option>  
+    </select></td></tr>
+		<tr>
+ <td>DEPARTMENT:</td> 
+    <td><select id="dept">  
+    <option selected="" value="Default">(Please select your department)</option>  
+    <option value="it">IT</option>  
+    <option value="cse">CSE</option>  
+    <option value="ece">EEE</option>  
+    <option value="mech">MECH</option>  
+    <option value="eee">EEE</option>  
+    </select></td></tr>
+    
+    <tr><br><br>
+ 
+<td>&nbsp;&nbsp;<br><input type="SUBMIT" value="BACK" class="mybutton" align="left"></td>
+<td>&nbsp;<br><input type="SUBMIT" value="SUBMIT" class="mybutton" align="RIGHT"></td>
+</tr></TABLE>
+ 
+</div>
+
+
+</body>
+
+</html>
